@@ -206,8 +206,8 @@ var set$1 = function set$1(object, property, value, receiver) {
 
 /** @preserve
  * jsPDF - PDF Document creation from JavaScript
- * Version 1.3.4 Built on 2017-07-25T00:17:40.463Z
- *                           CommitID 2a74f0ea51
+ * Version 1.3.4 Built on 2017-07-25T00:45:20.547Z
+ *                           CommitID 8319c23525
  *
  * Copyright (c) 2010-2016 James Hall <james@parall.ax>, https://github.com/MrRio/jsPDF
  *               2010 Aaron Spike, https://github.com/acspike
