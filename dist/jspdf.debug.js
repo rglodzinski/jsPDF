@@ -206,8 +206,8 @@ var set$1 = function set$1(object, property, value, receiver) {
 
 /** @preserve
  * jsPDF - PDF Document creation from JavaScript
- * Version 1.3.4 Built on 2017-07-25T13:56:18.014Z
- *                           CommitID b6cf8ade65
+ * Version 1.3.4 Built on 2017-07-25T13:58:28.591Z
+ *                           CommitID e2abb3b94e
  *
  * Copyright (c) 2010-2016 James Hall <james@parall.ax>, https://github.com/MrRio/jsPDF
  *               2010 Aaron Spike, https://github.com/acspike
@@ -9810,40 +9810,6 @@ Copyright (c) 2012 Willow Systems Corporation, willow-systems.com
             if (metadata_object_number) {
                 this.internal.write('/Metadata ' + metadata_object_number + ' 0 R');
             }
-        });
-        return this;
-    };
-})(jsPDF.API);
-
-/**
- * jsPDF Desable Print Scale Plugin
- *
- * Licensed under the MIT License.
- * http://opensource.org/licenses/mit-license
- */
-
-/**
- * Makes the PDF automatically disable pdf reader auto print scale. This works in Chrome, Firefox, Acrobat
- * Reader.
- *
- * @returns {jsPDF}
- * @name disablePrintScale
- * @example
- * var doc = new jsPDF()
- * doc.text(10, 10, 'This is a test')
- * doc.disablePrintScale()
- * doc.save('autoprint.pdf')
- */
-
-(function (jsPDFAPI) {
-    'use strict';
-
-    jsPDFAPI.disablePrintScale = function () {
-        'use strict';
-
-        this.internal.events.subscribe('postPutResources', function () {
-            this.internal.newObject();
-            this.internal.write("/ViewerPreferences<</Duplex/Simplex/Enforce[/PrintScaling]/PrintScaling/None>>", "endobj");
         });
         return this;
     };
